@@ -13,12 +13,12 @@ const routes: Routes = [
   { path: '', component: HomeComponent }, // localhost:4200
   { path: 'aggiungi', component: DipendenteAggiungiComponent }, // localhost:4200/aggiungi
   {
-    path: 'lista',
+    path: 'lista',  // localhost:4200/lista
     component: DipendenteListaComponent,
     children: [
-      { path: 'dettaglio/:indice', component: DipendenteDettaglioComponent },
-    ], // localhost:4200/lista/dettaglio/1
-  }, // localhost:4200/lista
+      { path: 'dettaglio/:indice', component: DipendenteDettaglioComponent }, // localhost:4200/lista/dettaglio/1
+    ], 
+  },
   { path: '**', redirectTo: '' }, // localhost:4200/rimuovi
 ];
 
