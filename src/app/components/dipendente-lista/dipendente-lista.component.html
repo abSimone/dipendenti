@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <article class="card bg-light shadow-sm bg-body rounded">
+        <section class="card-body">
+          <h3 class="card-title">Lista dipendenti</h3>
+          <table class="table m-0 ">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of dipendenti">
+                <th scope="row">
+                  <!-- <p class="clickable" routerLink="dettaglio/{{d.id}}">{{d.id}}</p> -->
+                  <p class="clickable" (click)="selezionaDipendente(d.id)">{{d.id}}</p>
+
+                </th>
+                <td>{{d.email}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="card-footer">
+          <section class="justify-content-start">
+            <button class="col-2 btn btn-secondary my-2" routerLink="">Indietro</button>
+          </section>
+        </section>
+      </article>
+    </div>
+    <article class="col">
+      <router-outlet></router-outlet>
+    </article>
+  </div>
+
+</div>

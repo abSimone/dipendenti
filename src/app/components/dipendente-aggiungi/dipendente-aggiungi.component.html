@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Aggiungi dipendente</h3>
+  </div>
+  <div class="card-body">
+    <article class="container">
+      <section class="row">
+
+        <div class="col">
+          <label for="nome">Nome</label>
+          <input name="nome" class="form-control" type="text" [(ngModel)]="dipendente.nome" id="nome">
+        </div>
+
+        <div class="col">
+          <label for="cognome">Cognome</label>
+          <input name="cognome" class="form-control" type="text" [(ngModel)]="dipendente.cognome" id="cognome">
+        </div>
+
+      </section>
+
+      <section class="row">
+
+        <div class="col">
+          <label for="email">Email</label>
+          <input name="email" class="form-control" type="text" [(ngModel)]="dipendente.email" id="email">
+        </div>
+
+        <div class="col">
+          <label for="dataDiNascita">Data di nascita</label>
+          <input name="dataDiNascita" class="form-control" type="date" [(ngModel)]="dateInput"
+            id="dataDiNascita">
+        </div>
+
+      </section>
+      <section class="row justify-content-end actions" id="pippo">
+        <button class="col-sm-1 btn btn-secondary" routerLink="">Indietro</button>
+        <button class="col-sm-1 btn btn-info" (click)="reset()">Reset</button>
+        <button class="col-sm-2 btn btn-success" (click)="aggiungi()">Aggiungi</button>
+      </section>
+
+    </article>
+  </div>
+</div>
